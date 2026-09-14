@@ -1,0 +1,11 @@
+workflows:
+  android-apk:
+    name: سفارش‌گیر ویزیتور - APK آماده نصب
+    max_build_duration: 60
+    environment:
+      java: 17
+    scripts:
+      - name: ساخت APK
+        script: bash gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/apk/debug/*.apk
